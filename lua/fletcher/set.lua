@@ -15,13 +15,8 @@ vim.opt.nu = true
 vim.opt.relativenumber = true
 
 -- indentation
--- source: https://vim.fandom.com/wiki/Indent_with_tabs,_align_with_spaces
-vim.opt.expandtab = false
-vim.opt.copyindent = true
 vim.opt.tabstop = 4
-vim.opt.softtabstop = 0
-vim.opt.shiftwidth = 4
---vim.opt.smartindent = true
+vim.opt.shiftwidth = 0
 
 vim.opt.wrap = false
 vim.opt.colorcolumn = '80,100,120'

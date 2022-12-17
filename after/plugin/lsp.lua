@@ -78,7 +78,6 @@ lspconfig.sumneko_lua.setup({
 			},
 			format = {
 				defaultConfig = {
-					indent_style = 'tab',
 					quote_style = 'single',
 					end_of_line = 'lf',
 				},

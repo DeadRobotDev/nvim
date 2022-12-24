@@ -31,6 +31,8 @@ return require('packer').startup(function(use)
 		branch = 'rsaihe_master',
 	})
 
+	use('cappyzawa/trim.nvim')
+
 	use('nvim-lualine/lualine.nvim')
 
 	-- colour schemes

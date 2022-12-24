@@ -1,5 +1,7 @@
 local trim = require('trim')
 
 trim.setup({
-	trim_last_line = false,
+	patterns = {
+		[[%s/\(\n\n\)\n\+/\1/]], -- replace multiple blank lines with a single line
+	},
 })

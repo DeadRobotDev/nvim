@@ -30,14 +30,21 @@ local add_header_guard = function()
 	local split = split_by_separator(buffer_name, separator)
 
 	local split_maxn = table.maxn(split)
-	local base = split[split_maxn - 1]
 	local ext = split[split_maxn]
 
 	if string.lower(ext) ~= 'h' then
 		return
 	end
 
-	local define = string.format('%s_%s', string.upper(base), string.upper(ext))
+	local split_start = 0
+
+	for i, v in ipairs(split) do
+		if v == 'include' then
+			split_start = i+1
+		end
+	end
+
+	local define = string.upper(table.concat(split, '_', split_start))
 
 	local contents = {}
 

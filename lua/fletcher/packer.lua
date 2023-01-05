@@ -35,6 +35,8 @@ return require('packer').startup(function(use)
 
 	use('nvim-lualine/lualine.nvim')
 
+	use(os.getenv('USERPROFILE') .. '/Programs/bin/whitebox_v0.99.0/editor_plugins/whitebox-vim')
+
 	-- colour schemes
 	use('gruvbox-community/gruvbox')
 	use('folke/tokyonight.nvim')

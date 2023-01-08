@@ -12,6 +12,7 @@ return require('packer').startup(function(use)
 		run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build',
 	})
 	use('ThePrimeagen/harpoon')
+	use('tpope/vim-fugitive')
 
 	use({
 		'nvim-treesitter/nvim-treesitter',

@@ -7,6 +7,8 @@ vim.opt.updatetime = 50
 vim.opt.guicursor = ''
 vim.opt.scrolloff = 20
 
+vim.opt.filetype = 'on'
+
 -- always show the gutter
 vim.opt.signcolumn = 'yes'
 
@@ -15,6 +17,7 @@ vim.opt.nu = true
 vim.opt.relativenumber = true
 
 -- indentation
+vim.opt.listchars:append('space:·')
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 0
 

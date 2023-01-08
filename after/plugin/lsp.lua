@@ -93,3 +93,16 @@ lspconfig.sumneko_lua.setup({
 		},
 	},
 })
+
+-- TODO: There is definitely a better way to do this.
+vim.api.nvim_create_autocmd('FileType', {
+	pattern = '*',
+	callback = function()
+		print(vim.bo.ft)
+		if vim.bo.ft == 'c' or vim.bo.ft == 'cpp' then
+			vim.opt.list = true
+		else
+			vim.opt.list = false
+		end
+	end
+})

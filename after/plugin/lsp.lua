@@ -11,6 +11,10 @@ cmp.setup({
 	},
 })
 
+cmp.setup.filetype('c', {
+	enabled = false,
+})
+
 null_ls.setup({
 	sources = {
 		null_ls.builtins.diagnostics.revive,
@@ -44,7 +48,6 @@ end
 
 -- add here for default config
 local servers = {
-	'clangd',
 	'zls',
 	'gopls',
 	'tsserver',
@@ -60,6 +63,10 @@ for _, lsp in ipairs(servers) do
 		on_attach = on_attach,
 	})
 end
+
+lspconfig.clangd.setup({
+	on_attach = on_attach,
+})
 
 local sumneko_root_path = os.getenv('USERPROFILE') .. '/Programs/lua-language-server'
 local sumneko_binary = sumneko_root_path .. '/bin/lua-language-server'

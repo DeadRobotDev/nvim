@@ -20,6 +20,7 @@ vim.opt.relativenumber = true
 vim.opt.listchars:append('space:·')
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 0
+vim.opt.cinoptions = 'l1';
 
 vim.opt.wrap = false
 vim.opt.colorcolumn = '80,100,120'

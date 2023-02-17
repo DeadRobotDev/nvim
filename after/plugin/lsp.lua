@@ -68,11 +68,11 @@ lspconfig.clangd.setup({
 	on_attach = on_attach,
 })
 
-local sumneko_root_path = os.getenv('USERPROFILE') .. '/Programs/lua-language-server'
-local sumneko_binary = sumneko_root_path .. '/bin/lua-language-server'
+local lua_ls_root_path = os.getenv('USERPROFILE') .. '/Programs/lua-language-server'
+local lua_ls_binary = lua_ls_root_path .. '/bin/lua-language-server'
 
-lspconfig.sumneko_lua.setup({
-	cmd = { sumneko_binary, '-E', sumneko_root_path .. '/main.lua' },
+lspconfig.lua_ls.setup({
+	cmd = { lua_ls_binary, '-E', lua_ls_root_path .. '/main.lua' },
 	capabilities = capabilities,
 	on_attach = on_attach,
 	settings = {

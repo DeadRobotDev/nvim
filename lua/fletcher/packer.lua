@@ -33,6 +33,7 @@ return require('packer').startup(function(use)
 	})
 
 	use('cappyzawa/trim.nvim')
+	use('bkad/CamelCaseMotion')
 
 	use('nvim-lualine/lualine.nvim')
 

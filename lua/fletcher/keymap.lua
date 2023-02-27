@@ -11,6 +11,8 @@ local M = {}
 
 -- recursive mapping (remap) - the result of a keymap (Q > j) can call another keymap (j > gg).
 -- non-recursive mapping (noremap) - the result of a keymap (Q > j) will only perform the action (j).
+M.remap = bind('', { silent = true })
+M.noremap = bind('', { silent = true })
 M.nnoremap = bind('n')
 M.vnoremap = bind('v')
 M.inoremap = bind('i')

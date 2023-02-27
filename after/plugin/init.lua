@@ -1,5 +1,6 @@
 local keymap = require('fletcher.keymap')
 
+local noremap = keymap.noremap
 local nnoremap = keymap.nnoremap
 local anoremap = keymap.anoremap
 
@@ -18,3 +19,8 @@ anoremap('<C-Down>', '<Nop>')
 
 anoremap('<Home>', '<Nop>')
 anoremap('<End>', '<Nop>')
+
+noremap('w', '<Plug>CamelCaseMotion_w', { silent = true });
+noremap('b', '<Plug>CamelCaseMotion_b', { silent = true });
+noremap('e', '<Plug>CamelCaseMotion_e', { silent = true });
+noremap('ge', '<Plug>CamelCaseMotion_ge', { silent = true });

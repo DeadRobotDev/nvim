@@ -48,7 +48,7 @@ local add_header_guard = function()
 
 	local contents = {}
 
-	table.insert(contents, string.format('#ifndef %s', define))
+	table.insert(contents, string.format('#if !defined(%s)', define))
 	table.insert(contents, string.format('#define %s', define))
 	table.insert(contents, '')
 	table.insert(contents, string.format('#endif // %s', define))

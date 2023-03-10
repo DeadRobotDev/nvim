@@ -12,7 +12,6 @@ return require('packer').startup(function(use)
 		run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build',
 	})
 	use('ThePrimeagen/harpoon')
-	use('tpope/vim-fugitive')
 
 	use({
 		'nvim-treesitter/nvim-treesitter',
@@ -28,8 +27,8 @@ return require('packer').startup(function(use)
 	use('jose-elias-alvarez/null-ls.nvim')
 
 	use({
-		'haze/zig.vim',
-		branch = 'rsaihe_master',
+		'atweiden/zig.vim',
+		branch = 'develop',
 	})
 
 	use('cappyzawa/trim.nvim')

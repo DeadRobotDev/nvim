@@ -10,6 +10,5 @@ local nnoremap = keymap.nnoremap
 
 nnoremap('<C-p>', '<Cmd>Telescope<CR>')
 nnoremap('<Leader>ff', builtin.find_files)
-nnoremap('<Leader>fs', builtin.grep_string)
-nnoremap('<Leader>fg', builtin.live_grep)
+nnoremap('<Leader>fs', builtin.live_grep)
 nnoremap('<Leader>fb', builtin.buffers)

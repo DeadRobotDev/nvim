@@ -52,7 +52,6 @@ end
 
 -- add here for default config
 local servers = {
-	'clangd',
 	'zls',
 	'gopls',
 	'tsserver',
@@ -99,6 +98,14 @@ lspconfig.lua_ls.setup({
 			},
 		},
 	},
+})
+
+local clangd_binary = os.getenv('USERPROFILE') .. '/Programs/clangd/bin/clangd'
+
+lspconfig.clangd.setup({
+	cmd = { clangd_binary },
+	capabilities = capabilities,
+	on_attach = on_attach,
 })
 
 vim.api.nvim_create_autocmd('FileType', {
